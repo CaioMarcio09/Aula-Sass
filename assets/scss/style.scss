@@ -1,0 +1,30 @@
+@import "./variaveis.scss";
+@import "./button.scss";
+@mixin button-style($background, $color){
+  background: $background;
+  color: $color;
+  &:hover{
+    background: darken($background, 10%);
+  }
+}
+.btn {
+  width:200px;
+  padding: 10px 0;
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+  margin: 20px;
+
+  &.btn-laranja{
+    @include button-style($color-orange, #000);
+  }
+  
+  &.btn-purple{
+    @include button-style($color-purple, #FFF);
+  }
+  
+  &.btn-yellow{
+    @include button-style($color-yellow, #000);
+  }
+}
